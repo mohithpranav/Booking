@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  background-color: #ffffff;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the navbar horizontally within the container */
+  border-bottom: 2px black solid;
+}
+
+.navbar {
+  width: 90%; /* Ensures left and right margin */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Positions logo on the left and items on the right */
+}
+
+.navbar-items-container {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between items */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+.navbar-items {
+  text-decoration: none;
+  color: #707070;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  position: relative; /* Enables the pseudo-element for the divider */
+  font-family: "Inter", sans-serif;
+}
+
+.navbar-items::after {
+  content: "|";
+  color: #707070;
+  margin-left: 15px; /* Space before the divider */
+}
+
+.navbar-items-container li:last-child .navbar-items::after {
+  content: ""; /* Clears the divider only for the last child */
+}
+
+.down-arrow {
+  margin-left: 10px; /* Space between the text and the arrow */
+  width: 12px; /* Adjust width as needed */
+  height: 12px; /* Adjust height as needed */
+}
+
+.navbar a {
+  display: flex; /* Aligns images in a row */
+  align-items: center; /* Vertically centers both images */
+  gap: 10px; /* Adds a gap between the logo and headerlogo */
+  text-decoration: none; /* Removes underline if applicable */
+}

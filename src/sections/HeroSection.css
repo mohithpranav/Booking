@@ -1,0 +1,84 @@
+.hero-section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: 5%;
+  height: 600px;
+  position: relative;
+  /* overflow: scroll; */
+  /* overflow: hidden; */
+}
+
+.columns-container {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  /* height: 100%; */
+}
+
+.column-one,
+.column-two {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.column-one {
+  animation: scroll-down 10s linear infinite;
+}
+
+.column-two {
+  animation: scroll-up 10s linear infinite;
+}
+
+.column-one img,
+.column-two img {
+  width: 250px;
+  height: 355px;
+  object-fit: cover;
+}
+
+.text-container {
+  width: 40%;
+  text-align: right;
+}
+
+.text-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Keyframes for animation */
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%); /* Start above the container */
+  }
+  50% {
+    transform: translateY(0); /* Middle of the container */
+  }
+  100% {
+    transform: translateY(100%); /* End below the container */
+  }
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%); /* Start below the container */
+  }
+  50% {
+    transform: translateY(0); /* Middle of the container */
+  }
+  100% {
+    transform: translateY(-100%); /* End above the container */
+  }
+}
