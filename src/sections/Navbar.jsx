@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { headerlogo, downarrow, logo } from "../assets/icons";
 import { navLinks } from "../constants";
-import "./Navbar.css";
+import "./navbar.css";
 
 const Navbar = () => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
