@@ -1,4 +1,3 @@
-// // import { Services } from "../../constants";
 import "./ServiceCard.css";
 import PropTypes from "prop-types";
 
@@ -17,8 +16,8 @@ const ServiceCard = ({ imgURL, title, description }) => {
 };
 
 ServiceCard.propTypes = {
-  imgURL: PropTypes.string.isRequired, // Mark imgURL as a required string
-  title: PropTypes.string.isRequired, // Title must be a string and is required
+  imgURL: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
 

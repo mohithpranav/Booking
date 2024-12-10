@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 .navbar-container {
@@ -9,24 +10,25 @@ body {
   height: 92px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers the navbar horizontally within the container */
-  border-bottom: 2px black solid;
+  justify-content: center;
+  border-bottom: 1px #eaeaea solid;
+  overflow: hidden;
 }
 
 .navbar {
-  width: 90%; /* Ensures left and right margin */
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Positions logo on the left and items on the right */
+  justify-content: space-between;
 }
 
 .navbar-items-container {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between items */
-  margin: 0; /* Removes default margin */
-  padding: 0; /* Removes default padding */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-items {
@@ -36,14 +38,14 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
-  position: relative; /* Enables the pseudo-element for the divider */
+  position: relative;
   font-family: "Inter", sans-serif;
 }
 
 .navbar-items::after {
   content: "|";
   color: #707070;
-  margin-left: 15px; /* Space before the divider */
+  margin-left: 15px;
 }
 
 .navbar-items-container li:last-child .navbar-items::after {
@@ -51,14 +53,58 @@ body {
 }
 
 .down-arrow {
-  margin-left: 10px; /* Space between the text and the arrow */
-  width: 12px; /* Adjust width as needed */
-  height: 12px; /* Adjust height as needed */
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
 }
 
 .navbar a {
-  display: flex; /* Aligns images in a row */
-  align-items: center; /* Vertically centers both images */
-  gap: 10px; /* Adds a gap between the logo and headerlogo */
-  text-decoration: none; /* Removes underline if applicable */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  right: 7%;
+  width: 200px;
+  height: 70px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 12px;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-item span {
+  font-weight: bold;
+}
+
+.dropdown-item a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.dropdown-item a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ebebeb;
 }
